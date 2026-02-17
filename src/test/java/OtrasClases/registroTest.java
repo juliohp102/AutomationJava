@@ -1,9 +1,12 @@
+package OtrasClases;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class registroTest {
@@ -15,10 +18,18 @@ public class registroTest {
         WebDriverManager.edgedriver().setup();
         driver = new EdgeDriver();
         driver.manage().window().maximize();
-        driver.get("https://demo.guru99.com/test/newtours/register.php");
+        driver.get("https://demo.guru99.com/test/newtours/");
+
+
     }
     @Test
     public void resgistroExitoso(){
+
+        WebElement paginaRegistro;;
+        paginaRegistro = driver.findElement(By.linkText("register.php"));
+
+        /*
+
         System.out.println("---Ejecutando el Test---");
         driver.findElement(By.name("firstName")).sendKeys("julio");
         driver.findElement(By.name("lastName")).sendKeys("hernandez");
@@ -31,6 +42,9 @@ public class registroTest {
         driver.findElement(By.name("password")).sendKeys("Lucecit0");
         driver.findElement(By.name("confirmPassword")).sendKeys("Lucecit0");
         driver.findElement(By.name("submit")).click();
+
+        */
+
     }
     @AfterEach
     public void tearDown (){
