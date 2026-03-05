@@ -1,10 +1,9 @@
+package clasesAnteriores;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.example.pages.FligthPages;
-import org.example.pages.HomePage;
-import org.example.pages.LoginPages;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -13,7 +12,7 @@ public class FlightsPOMTest {
     WebDriver driver = null;
     private static final String BASE_URL = "https://demo.guru99.com/test/newtours/index.php";
 
-    @BeforeEach
+    @BeforeTest
     public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -33,7 +32,7 @@ public class FlightsPOMTest {
         FligthPages flightsPage = new FligthPages(driver);
         flightsPage.clickContinuar();
     }
-    @AfterEach
+    @AfterTest
     public void tearDown(){
         driver.quit();
     }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Test de Regresión"  verbose="1" output="test-output">
+
+<!-- Ejecutar todos los test de NewTours en un solo run -->
+    <test name="Búsqueda de Productos en ML">
+        <classes>
+            <class name ="BusquedaProductosML"/>
+        </classes>
+    </test>
+    <test name="Búsqueda de Productos en Ml2">
+            <classes>
+                <class name ="BusquedaProductosML2"/>
+            </classes>
+
+    </test>
+    <test name="Búsqueda de Productos en ML3">
+                <classes>
+                    <class name ="BusquedaProductosML3"/>
+                </classes>
+    </test>
+    <test name="Búsqueda de Productos en ML4">
+    <classes>
+        <class name ="BusquedaProductosML4"/>
+    </classes>
+    </test>
+</suite>

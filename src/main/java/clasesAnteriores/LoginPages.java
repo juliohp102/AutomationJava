@@ -1,4 +1,4 @@
-package org.example.pages;
+package clasesAnteriores;
 
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.WebElement;
