@@ -1,9 +1,9 @@
 package OtrasClases;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +12,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 public class registroTest {
     WebDriver driver = null;
 
-    @BeforeEach
+    @BeforeTest
     public void setUp(){
         System.out.println("---Ejecutando la configuración---");
         WebDriverManager.edgedriver().setup();
@@ -46,7 +46,7 @@ public class registroTest {
         */
 
     }
-    @AfterEach
+    @AfterTest
     public void tearDown (){
         //driver.quit();
         System.out.println("---Ejecutando cierre del Test---");

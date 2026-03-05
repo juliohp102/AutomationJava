@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="EjecuciónSetPruebas" verbose="1">
+
+    <!-- Ejecutar todos los tests de NewTours en un solo run -->
+    <test name="Busqueda de productos en ML">
+        <classes>
+            <class name="BusquedaProductosML"/>
+        </classes>
+    </test>
+    <test name="Login">
+        <classes>
+            <class name="BusquedaProductosML2"/>
+        </classes>
+    </test>
+    <test name="Registro">
+        <classes>
+            <class name="BusquedaProductosML3"/>
+        </classes>
+    </test>
+</suite>

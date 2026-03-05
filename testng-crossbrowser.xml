@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Mercado Libre - Cross Browser"  verbose="1">
+
+    <!-- Ejecutar todos los test en diferentes navegadores en un solo run -->
+    <test name="Chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name ="BusquedaProductosML"/>
+            <class name ="BusquedaProductosML2"/>
+        </classes>
+    </test>
+
+    <parameter name="browser" value="firefox"></parameter>
+    <test name="Firefox">
+        <classes>
+            <class name ="BusquedaProductosML"/>
+            <class name ="BusquedaProductosML3"/>
+        </classes>
+
+        <parameter name="browser" value="edge"></parameter>
+    </test>
+    <test name="Edge">
+        <classes>
+            <class name ="BusquedaProductosML"/>
+            <class name ="BusquedaProductosML4"/>
+        </classes>
+    </test>
+
+</suite>
